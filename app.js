@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 import userRoutes from './src/routes/user.route.js';
 import categoryRoutes from './src/routes/category.route.js';
+import productRoutes from './src/routes/product.route.js';
+
 import cookieParser from "cookie-parser";
 
 dotenv.config();
@@ -24,6 +26,7 @@ app.use(cors(corsOptions));
 
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/category", categoryRoutes);
+app.use("/api/v1/product", productRoutes);
 
 
 const PORT = 3000;

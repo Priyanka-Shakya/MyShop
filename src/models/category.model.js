@@ -7,6 +7,12 @@ const categorySchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    categoryProducts:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Product'
+        }
+    ],
     created_by:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
